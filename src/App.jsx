@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import { createRoot } from 'react-dom/client'
+import {createRoot} from 'react-dom/client'
 import './styles/Theme.css'
 import './styles/index.css'
 import './styles/App.css'
@@ -59,7 +59,7 @@ function App() {
 const rootEl = document.getElementById('root')
 if (rootEl) {
     if (!rootEl.__root) rootEl.__root = createRoot(rootEl)
-    rootEl.__root.render(<App />)
+    rootEl.__root.render(<App/>)
 }
 
 export default App
