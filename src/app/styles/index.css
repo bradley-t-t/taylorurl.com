@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Architype Stedelijk";
-    src: local("Architype Stedelijk"), url("/fonts/Architype Stedelijk/Web Fonts/fbf4b903ab671383e79e189b4e1f356e.woff2") format("woff2"), url("/fonts/Architype Stedelijk/Web Fonts/fbf4b903ab671383e79e189b4e1f356e.woff") format("woff");
+    src: local("Architype Stedelijk"), url("/fonts/Architype Stedelijk/Web Fonts/as-font.woff2") format("woff2"), url("/fonts/Architype Stedelijk/Web Fonts/as-font.woff") format("woff"), url("/fonts/Architype Stedelijk/Web Fonts/as-font.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Architype Stedelijk";
-    src: local("Architype Stedelijk Bold"), local("Architype Stedelijk"), url("/fonts/Architype Stedelijk/Web Fonts/fbf4b903ab671383e79e189b4e1f356e.woff2") format("woff2"), url("/fonts/Architype Stedelijk/Web Fonts/fbf4b903ab671383e79e189b4e1f356e.woff") format("woff");
+    src: local("Architype Stedelijk Bold"), local("Architype Stedelijk"), url("/fonts/Architype Stedelijk/Web Fonts/as-font.woff2") format("woff2"), url("/fonts/Architype Stedelijk/Web Fonts/as-font.woff") format("woff"), url("/fonts/Architype Stedelijk/Web Fonts/as-font.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -16,11 +16,9 @@
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-
-    color-scheme: light;
+    color-scheme: light dark;
     color: var(--color-text);
     background: var(--color-bg);
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -66,3 +64,11 @@ button:focus-visible {
 }
 
 h1,h2,h3,h4,h5,h6,.hero-title,.section-title { font-family: var(--font-display); }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color: var(--color-text-dark);
+        background: var(--color-bg-dark);
+    }
+    body { background: var(--color-bg-dark); color: var(--color-text-dark); }
+}

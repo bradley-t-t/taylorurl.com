@@ -35,6 +35,7 @@
     --shadow-elev-1: 0 2px 6px -1px rgba(10, 20, 40, .08), 0 4px 18px -6px rgba(10, 20, 40, .10);
     --shadow-elev-2: 0 6px 18px -4px rgba(10, 20, 40, .16), 0 10px 32px -8px rgba(10, 20, 40, .22);
     --gradient-hero: radial-gradient(circle at 40% 25%, rgba(0, 82, 201, .12), transparent 60%), radial-gradient(circle at 75% 70%, rgba(33, 198, 255, .12), transparent 65%);
+    --gradient-hero-dark: radial-gradient(circle at 40% 25%, rgba(0, 82, 201, .22), transparent 60%), radial-gradient(circle at 75% 70%, rgba(33, 198, 255, .18), transparent 65%);
     --gradient-offer-card: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-white) 65%);
     --gradient-client-shell: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-white) 85%);
     --radius-sm: 6px;
@@ -55,9 +56,23 @@
     --color-accent-fade: #0052C922;
     --color-accent-fade-strong: #0052C940;
     --color-nav-bg: rgba(255, 255, 255, 0.88);
+    --color-nav-bg-dark: rgba(36, 36, 36, 0.78);
     --color-nav-bg-solid: #ffffff;
     --color-nav-border: var(--color-border-soft);
     --color-nav-active: var(--color-accent-hover);
     --shadow-nav: 0 2px 4px -2px rgba(10, 20, 40, .08), 0 4px 12px -4px rgba(10, 20, 40, .10);
     --font-display: "Architype Stedelijk", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: var(--color-text-dark);
+        --color-bg: var(--color-bg-dark);
+        --color-bg-alt: var(--color-bg-alt-dark);
+        --color-surface: var(--color-surface-dark);
+        --color-muted: var(--color-muted-dark);
+        --color-nav-bg: var(--color-nav-bg-dark);
+        --color-nav-border: #333a42;
+        --gradient-offer-card: linear-gradient(135deg, rgba(0,82,201,.15) 0%, #2d2f33 65%);
+        --gradient-client-shell: linear-gradient(135deg, rgba(0,82,201,.15) 0%, #2d2f33 85%);
+    }
 }

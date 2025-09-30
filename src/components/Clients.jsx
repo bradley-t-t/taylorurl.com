@@ -1,19 +1,18 @@
 function Clients() {
     function logoError(e) {
-        const s = e.target.closest('.client-brand');
-        e.target.remove();
+        const s = e.target.closest('.client-brand')
+        e.target.remove()
         if (s) {
-            s.classList.add('missing');
+            s.classList.add('missing')
             s.textContent = 'Logo'
         }
     }
-
     const clients = [
-        {logo: '/SRM-Logo.png', alt: 'Smyrna Ready Mix', label: 'Smyrna Ready Mix'},
-        {logo: '/DBF-Logo.png', alt: 'Dickinson Bayou Fleeting', label: 'Dickinson Bayou Fleeting'},
-        {logo: '/CT-Logo.png', alt: "Charlie T's", label: "Charlie T's"},
-        {logo: '/Mineplex-Logo.png', alt: 'Mineplex', label: 'Mineplex'},
-        {logo: '/LP-Logo.png', alt: 'Liberty Panthers', label: 'Liberty Panthers'}
+        {logo: '/clients-logos/SRM-Logo.png', alt: 'Smyrna Ready Mix', label: 'Smyrna Ready Mix'},
+        {logo: '/clients-logos/DBF-Logo.png', alt: 'Dickinson Bayou Fleeting', label: 'Dickinson Bayou Fleeting'},
+        {logo: '/clients-logos/CT-Logo.png', alt: "Charlie T's", label: "Charlie T's"},
+        {logo: '/clients-logos/Mineplex-Logo.png', alt: 'Mineplex', label: 'Mineplex'},
+        {logo: '/clients-logos/Hypixel-Logo.png', alt: 'Hypixel', label: 'Hypixel'}
     ]
     const rowClass = 'client-row count-' + clients.length
     return (

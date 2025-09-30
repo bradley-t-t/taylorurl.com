@@ -12,19 +12,20 @@ import Footer from '../components/Footer.jsx'
 function App() {
     const email = 'trenton@taylorurl.com'
     const [copied, setCopied] = useState(false)
+    const [activeSection, setActiveSection] = useState('')
 
     function copyEmail(e) {
-        e.preventDefault();
+        e.preventDefault()
 
         function f() {
-            const el = document.createElement('textarea');
-            el.value = email;
-            el.style.position = 'fixed';
-            document.body.appendChild(el);
-            el.focus();
-            el.select();
+            const el = document.createElement('textarea')
+            el.value = email
+            el.style.position = 'fixed'
+            document.body.appendChild(el)
+            el.focus()
+            el.select()
             try {
-                document.execCommand('copy');
+                document.execCommand('copy')
                 setCopied(true)
             } catch (_) {
                 window.location.href = 'mailto:' + email
@@ -39,13 +40,28 @@ function App() {
 
     useEffect(() => {
         if (copied) {
-            const t = setTimeout(() => setCopied(false), 2200);
+            const t = setTimeout(() => setCopied(false), 2200)
             return () => clearTimeout(t)
         }
     }, [copied])
+
+    useEffect(() => {
+        const sections = Array.from(document.querySelectorAll('section[id]'))
+        if (!sections.length) return
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(en => {
+                if (en.isIntersecting) {
+                    setActiveSection(en.target.id)
+                }
+            })
+        }, {rootMargin: '-55% 0px -40% 0px', threshold: [0, .25, .5, .75, 1]})
+        sections.forEach(s => observer.observe(s))
+        return () => observer.disconnect()
+    }, [])
+
     return (
         <div className="page" id="top">
-            <Navbar email={email}/>
+            <Navbar email={email} activeSection={activeSection}/>
             <Hero email={email} copied={copied} copyEmail={copyEmail}/>
             <main>
                 <Offerings/>
