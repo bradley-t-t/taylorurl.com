@@ -28,13 +28,13 @@ function Offerings() {
                     </div>
                     <div className="offer-card" role="listitem">
                         <div className="badge" aria-hidden="true"/>
-                        <h3 className="offer-card-title">Targeted Ad & Funnel Setup</h3>
-                        <p className="offer-card-sub">Acquisition loops that continuously learn and refine.</p>
+                        <h3 className="offer-card-title">Performance Optimization</h3>
+                        <p className="offer-card-sub">Faster loads, stronger Core Web Vitals, smoother UX.</p>
                         <ul className="offer-card-points">
-                            <li>Landing page frameworks</li>
-                            <li>Attribution and tracking</li>
-                            <li>Structured iteration</li>
-                            <li>Meta Pixel</li>
+                            <li>Core Web Vitals</li>
+                            <li>Bundle & asset audits</li>
+                            <li>Caching & edge delivery</li>
+                            <li>Monitoring & iteration</li>
                         </ul>
                     </div>
                 </div>

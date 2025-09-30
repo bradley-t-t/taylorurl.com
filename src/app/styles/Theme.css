@@ -59,4 +59,5 @@
     --color-nav-border: var(--color-border-soft);
     --color-nav-active: var(--color-accent-hover);
     --shadow-nav: 0 2px 4px -2px rgba(10, 20, 40, .08), 0 4px 12px -4px rgba(10, 20, 40, .10);
+    --font-display: "Architype Stedelijk", system-ui, Avenir, Helvetica, Arial, sans-serif;
 }

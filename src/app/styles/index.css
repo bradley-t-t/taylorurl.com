@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Architype Stedelijk";
+    src: local("Architype Stedelijk"), url("/fonts/Architype Stedelijk/Web Fonts/fbf4b903ab671383e79e189b4e1f356e.woff2") format("woff2"), url("/fonts/Architype Stedelijk/Web Fonts/fbf4b903ab671383e79e189b4e1f356e.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Architype Stedelijk";
+    src: local("Architype Stedelijk Bold"), local("Architype Stedelijk"), url("/fonts/Architype Stedelijk/Web Fonts/fbf4b903ab671383e79e189b4e1f356e.woff2") format("woff2"), url("/fonts/Architype Stedelijk/Web Fonts/fbf4b903ab671383e79e189b4e1f356e.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -50,3 +64,5 @@ button:focus,
 button:focus-visible {
     outline: 4px auto var(--color-focus-outline);
 }
+
+h1,h2,h3,h4,h5,h6,.hero-title,.section-title { font-family: var(--font-display); }
