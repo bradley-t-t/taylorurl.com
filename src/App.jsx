@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {useEffect, useState} from 'react'
+import { createRoot } from 'react-dom/client'
+import './styles/Theme.css'
+import './styles/index.css'
+import './styles/App.css'
+import Navbar from './components/Navbar.jsx'
+import Hero from './components/Hero.jsx'
+import Offerings from './components/Offerings.jsx'
+import Clients from './components/Clients.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const email = 'trenton@taylorurl.com'
+    const [copied, setCopied] = useState(false)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    function copyEmail(e) {
+        e.preventDefault();
+
+        function f() {
+            const el = document.createElement('textarea');
+            el.value = email;
+            el.style.position = 'fixed';
+            document.body.appendChild(el);
+            el.focus();
+            el.select();
+            try {
+                document.execCommand('copy');
+                setCopied(true)
+            } catch (_) {
+                window.location.href = 'mailto:' + email
+            }
+            document.body.removeChild(el)
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(() => setCopied(true)).catch(f)
+        } else f()
+    }
+
+    useEffect(() => {
+        if (copied) {
+            const t = setTimeout(() => setCopied(false), 2200);
+            return () => clearTimeout(t)
+        }
+    }, [copied])
+    return (
+        <div className="page" id="top">
+            <Navbar email={email}/>
+            <Hero email={email} copied={copied} copyEmail={copyEmail}/>
+            <main>
+                <Offerings/>
+                <Clients/>
+            </main>
+            <Footer email={email} copied={copied} copyEmail={copyEmail}/>
+        </div>
+    )
+}
+
+const rootEl = document.getElementById('root')
+if (rootEl) {
+    if (!rootEl.__root) rootEl.__root = createRoot(rootEl)
+    rootEl.__root.render(<App />)
 }
 
 export default App
