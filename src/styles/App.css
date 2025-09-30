@@ -10,7 +10,7 @@
     min-height: 100dvh;
     background: var(--color-bg);
     background-image: var(--gradient-hero);
-    padding-top: 84px;
+    padding-top: 100px;
 }
 
 .container {
@@ -475,7 +475,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    height: 84px;
+    height: 100px;
 }
 
 .nav-brand {
@@ -486,8 +486,8 @@
 }
 
 .nav-logo {
-    width: 72px;
-    height: 72px;
+    width: 88px;
+    height: 88px;
     object-fit: contain;
     filter: drop-shadow(0 0 .6rem var(--color-logo-shadow1));
     transition: transform .4s var(--transition-base), filter .4s var(--transition-base);
@@ -555,7 +555,7 @@
 }
 
 .section {
-    scroll-margin-top: 90px;
+    scroll-margin-top: 110px;
 }
 
 .hero-centered {
@@ -615,12 +615,20 @@
     }
 
     .nav-inner {
-        height: 76px;
+        height: 88px;
     }
 
     .nav-logo {
-        width: 64px;
-        height: 64px;
+        width: 76px;
+        height: 76px;
+    }
+
+    .page {
+        padding-top: 88px;
+    }
+
+    .section {
+        scroll-margin-top: 98px;
     }
 }
 
@@ -630,17 +638,25 @@
     }
 
     .nav-logo {
-        width: 56px;
-        height: 56px;
+        width: 64px;
+        height: 64px;
     }
 
     .nav-inner {
-        height: 66px;
+        height: 74px;
     }
 
     .nav-link, .nav-cta {
         font-size: .65rem;
         padding: .5rem .65rem;
+    }
+
+    .page {
+        padding-top: 74px;
+    }
+
+    .section {
+        scroll-margin-top: 84px;
     }
 }
 
