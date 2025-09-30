@@ -7,6 +7,7 @@ function Clients() {
             s.textContent = 'Logo'
         }
     }
+
     const clients = [
         {logo: '/clients-logos/SRM-Logo.png', alt: 'Smyrna Ready Mix', label: 'Smyrna Ready Mix'},
         {logo: '/clients-logos/DBF-Logo.png', alt: 'Dickinson Bayou Fleeting', label: 'Dickinson Bayou Fleeting'},

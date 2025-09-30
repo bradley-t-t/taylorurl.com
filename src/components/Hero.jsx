@@ -6,7 +6,8 @@ function Hero({email, copied, copyEmail}) {
                     <p className="eyebrow">Web Design • JS Engineering • Performance</p>
                     <h1 id="hero-title" className="hero-title">Systems‑first <span
                         className="accent">web design</span> and JavaScript engineering for growth</h1>
-                    <p className="lead">I plan, design, and build lean, resilient applications: clear interfaces, durable
+                    <p className="lead">I plan, design, and build lean, resilient applications: clear interfaces,
+                        durable
                         component architecture with a focus on being useful.</p>
                     <div className="cta-row">
                         <a href={'mailto:' + email} className="cta primary large">Start a Conversation</a>

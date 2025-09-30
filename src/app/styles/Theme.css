@@ -63,6 +63,7 @@
     --shadow-nav: 0 2px 4px -2px rgba(10, 20, 40, .08), 0 4px 12px -4px rgba(10, 20, 40, .10);
     --font-display: "Architype Stedelijk", system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
 @media (prefers-color-scheme: dark) {
     :root {
         --color-text: var(--color-text-dark);
@@ -72,7 +73,7 @@
         --color-muted: var(--color-muted-dark);
         --color-nav-bg: var(--color-nav-bg-dark);
         --color-nav-border: #333a42;
-        --gradient-offer-card: linear-gradient(135deg, rgba(0,82,201,.15) 0%, #2d2f33 65%);
-        --gradient-client-shell: linear-gradient(135deg, rgba(0,82,201,.15) 0%, #2d2f33 85%);
+        --gradient-offer-card: linear-gradient(135deg, rgba(0, 82, 201, .15) 0%, #2d2f33 65%);
+        --gradient-client-shell: linear-gradient(135deg, rgba(0, 82, 201, .15) 0%, #2d2f33 85%);
     }
 }
