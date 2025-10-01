@@ -13,7 +13,8 @@ function Clients() {
         {logo: '/clients-logos/DBF-Logo.png', alt: 'Dickinson Bayou Fleeting', label: 'Dickinson Bayou Fleeting'},
         {logo: '/clients-logos/CT-Logo.png', alt: "Charlie T's", label: "Charlie T's"},
         {logo: '/clients-logos/Mineplex-Logo.png', alt: 'Mineplex', label: 'Mineplex'},
-        {logo: '/clients-logos/Hypixel-Logo.png', alt: 'Hypixel', label: 'Hypixel'}
+        {logo: '/clients-logos/Hypixel-Logo.png', alt: 'Hypixel', label: 'Hypixel'},
+        {logo: '/clients-logos/Speedway146-Logo.png', alt: 'Speedway 146', label: 'Speedway 146'}
     ]
     const rowClass = 'client-row count-' + clients.length
     return (
