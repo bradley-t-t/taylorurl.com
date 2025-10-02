@@ -2,10 +2,15 @@ import {createRoot} from 'react-dom/client'
 import './styles/Theme.css'
 import './styles/index.css'
 import './styles/App.css'
-import HomeView from '../views/HomeView.jsx'
+import HomeView from '@views/HomeView.jsx'
+import ErrorBoundary from './ErrorBoundary.jsx'
 
 function App() {
-    return <HomeView/>
+    return (
+        <ErrorBoundary fallback={"Something went wrong"}>
+            <HomeView/>
+        </ErrorBoundary>
+    )
 }
 
 const rootEl = document.getElementById('root')

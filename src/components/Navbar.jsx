@@ -21,10 +21,16 @@ function Navbar({email, activeSection = '', onEmailClick}) {
                     <img src="/images/TaylorURL-Logo.png" alt="TaylorURL" className="nav-logo"/>
                 </a>
                 <div className="nav-links" role="list">
-                    {links.map(l => (
-                        <a key={l.id} href={'#' + l.id}
-                           className={"nav-link" + (activeSection === l.id ? ' active' : '')}>{l.label}</a>
-                    ))}
+                    {links.map(l => {
+                        const active = activeSection === l.id
+                        return (
+                            <a key={l.id} href={'#' + l.id}
+                               className={"nav-link" + (active ? ' active' : '')}
+                               {...(active ? {"aria-current": "true"} : {})}>
+                                {l.label}
+                            </a>
+                        )
+                    })}
                     <a href={'mailto:' + email} className="nav-cta" onClick={click}>Email Me</a>
                 </div>
                 <a href={'mailto:' + email} className="nav-cta nav-mobile-cta" onClick={click}>Email Me</a>
