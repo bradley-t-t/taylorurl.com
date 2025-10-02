@@ -53,7 +53,7 @@ function Process() {
                 </div>
                 <ol className="process-flow" aria-label="Project process">
                     {steps.map((s, i) => (
-                        <li key={s.title} className="process-item" data-reveal data-reveal-delay={120 + i*70}>
+                        <li key={s.title} className="process-item" data-reveal data-reveal-delay={120 + i * 70}>
                             <div className="step-shell" tabIndex={0}>
                                 <div className="step-index" aria-hidden="true">{String(i + 1).padStart(2, '0')}</div>
                                 <h3 className="step-title">{s.title}</h3>

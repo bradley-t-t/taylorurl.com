@@ -97,7 +97,8 @@ function ContactModal({onClose, onSubmit, email}) {
                     </div>
                     <div className="actions">
                         <button type="button" className="cta outline" onClick={close}>Cancel</button>
-                        <button type="submit" className="cta primary" disabled={disabled}>{submitting ? 'Preparing...' : 'Open Email'}</button>
+                        <button type="submit" className="cta primary"
+                                disabled={disabled}>{submitting ? 'Preparing...' : 'Open Email'}</button>
                     </div>
                 </form>
             </div>

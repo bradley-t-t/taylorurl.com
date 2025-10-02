@@ -1,44 +1,43 @@
 import './styles/Offerings.css'
 
+const OFFER_CARDS = [
+    {
+        title: 'Website Design & Build',
+        sub: 'Intentional layouts and systemized styling for clarity.',
+        points: ['Design systems', 'Responsive UX', 'Accessibility-first', 'Third-Party Platforms'],
+        delay: 120
+    },
+    {
+        title: 'JavaScript Application Engineering',
+        sub: 'Modern component architecture without bloat.',
+        points: ['State and data flows', 'Component libraries', 'Edge-ready builds', 'React Framework'],
+        delay: 200
+    },
+    {
+        title: 'Performance Optimization',
+        sub: 'Faster loads, stronger Core Web Vitals, smoother UX.',
+        points: ['Core Web Vitals', 'Bundle & asset audits', 'Caching & edge delivery', 'Monitoring & iteration'],
+        delay: 280
+    }
+]
+
 function Offerings() {
     return (
         <section className="section offerings" id="offerings" aria-labelledby="offerings-title" data-reveal>
             <div className="container" data-reveal data-reveal-delay="40">
                 <h2 id="offerings-title" className="section-title" data-reveal data-reveal-delay="80">What I Do</h2>
                 <div className="offer-cards solo" role="list">
-                    <div className="offer-card" role="listitem" data-reveal data-reveal-delay="120">
-                        <div className="badge" aria-hidden="true"/>
-                        <h3 className="offer-card-title">Website Design & Build</h3>
-                        <p className="offer-card-sub">Intentional layouts and systemized styling for clarity.</p>
-                        <ul className="offer-card-points">
-                            <li>Design systems</li>
-                            <li>Responsive UX</li>
-                            <li>Accessibility-first</li>
-                            <li>Third-Party Platforms</li>
-                        </ul>
-                    </div>
-                    <div className="offer-card" role="listitem" data-reveal data-reveal-delay="200">
-                        <div className="badge" aria-hidden="true"/>
-                        <h3 className="offer-card-title">JavaScript Application Engineering</h3>
-                        <p className="offer-card-sub">Modern component architecture without bloat.</p>
-                        <ul className="offer-card-points">
-                            <li>State and data flows</li>
-                            <li>Component libraries</li>
-                            <li>Edge-ready builds</li>
-                            <li>React Framework</li>
-                        </ul>
-                    </div>
-                    <div className="offer-card" role="listitem" data-reveal data-reveal-delay="280">
-                        <div className="badge" aria-hidden="true"/>
-                        <h3 className="offer-card-title">Performance Optimization</h3>
-                        <p className="offer-card-sub">Faster loads, stronger Core Web Vitals, smoother UX.</p>
-                        <ul className="offer-card-points">
-                            <li>Core Web Vitals</li>
-                            <li>Bundle & asset audits</li>
-                            <li>Caching & edge delivery</li>
-                            <li>Monitoring & iteration</li>
-                        </ul>
-                    </div>
+                    {OFFER_CARDS.map(c => (
+                        <div className="offer-card" role="listitem" key={c.title} data-reveal
+                             data-reveal-delay={c.delay}>
+                            <div className="badge" aria-hidden="true"/>
+                            <h3 className="offer-card-title">{c.title}</h3>
+                            <p className="offer-card-sub">{c.sub}</p>
+                            <ul className="offer-card-points">
+                                {c.points.map(p => <li key={p}>{p}</li>)}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
