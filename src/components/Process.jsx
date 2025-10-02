@@ -44,16 +44,16 @@ function Process() {
         }
     ]
     return (
-        <section className="section process" id="process" aria-labelledby="process-title">
-            <div className="container process-layout">
-                <div className="process-head">
+        <section className="section process" id="process" aria-labelledby="process-title" data-reveal>
+            <div className="container process-layout" data-reveal data-reveal-delay="40">
+                <div className="process-head" data-reveal data-reveal-delay="80">
                     <h2 id="process-title" className="section-title">How It Works</h2>
                     <p className="process-intro">A transparent, collaborative path from first hello to long-term
                         support.</p>
                 </div>
                 <ol className="process-flow" aria-label="Project process">
                     {steps.map((s, i) => (
-                        <li key={s.title} className="process-item">
+                        <li key={s.title} className="process-item" data-reveal data-reveal-delay={120 + i*70}>
                             <div className="step-shell" tabIndex={0}>
                                 <div className="step-index" aria-hidden="true">{String(i + 1).padStart(2, '0')}</div>
                                 <h3 className="step-title">{s.title}</h3>
