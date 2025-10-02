@@ -1,3 +1,5 @@
+import './styles/Offerings.css'
+
 function Offerings() {
     return (
         <section className="section offerings" id="offerings" aria-labelledby="offerings-title">

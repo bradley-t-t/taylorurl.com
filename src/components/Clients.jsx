@@ -1,3 +1,5 @@
+import './styles/Clients.css'
+
 function Clients() {
     function logoError(e) {
         const s = e.target.closest('.client-brand')

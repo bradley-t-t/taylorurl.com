@@ -1,0 +1,51 @@
+.footer {
+    margin-top: auto;
+    background: var(--color-bg-alt);
+    padding: 2rem 0
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between
+}
+
+.foot-nav {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center
+}
+
+.foot-nav a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: .3px
+}
+
+.foot-nav a:hover, .foot-nav a:focus-visible {
+    color: var(--color-link-hover)
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: var(--color-link);
+    font: inherit;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-size: .8rem;
+    line-height: 1;
+    letter-spacing: .3px
+}
+
+.link-btn:hover, .link-btn:focus-visible {
+    color: var(--color-link-hover)
+}
+
